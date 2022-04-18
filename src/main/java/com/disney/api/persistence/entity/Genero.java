@@ -1,11 +1,15 @@
 package com.disney.api.persistence.entity;
 
 
-import jdk.dynalink.linker.LinkerServices;
 
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
 @Entity
 @Table(name = "genero")
 public class Genero {
