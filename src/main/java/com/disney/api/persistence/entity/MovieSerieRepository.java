@@ -13,9 +13,12 @@ public class MovieSerieRepository {
     @Autowired
     private MovieSerieCrudRepository movieSerieCrudRepository;
 
-    public void save(MovieSerie movieSerie){
 
-        movieSerieCrudRepository.save(movieSerie);
+
+
+    public MovieSerie save(MovieSerie movieSerie){
+
+       return movieSerieCrudRepository.save(movieSerie);
 
     }
 
@@ -24,7 +27,7 @@ public class MovieSerieRepository {
         movieSerieCrudRepository.delete(movieSerie);
     }
 
-    public MovieSerie findByTitulo(String title){
+    public MovieSerie findByTitle(String title){
 
         return movieSerieCrudRepository.findByTitle(title);
 
@@ -40,6 +43,17 @@ public class MovieSerieRepository {
 
         return movieSerieCrudRepository.findAll();
 
+    }
+
+
+    public List<MovieSerie> orderByTitleAsc(){
+
+        return movieSerieCrudRepository.findByTitleOrderByTitleAsc();
+    }
+
+    public List<MovieSerie> orderByDateDesc(){
+
+        return movieSerieCrudRepository.findByDateorderByDateDesc();
     }
 
 

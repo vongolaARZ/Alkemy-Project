@@ -19,7 +19,7 @@ public class Character {
     @Column(name = "image")
     private String image;
 
-    @Column(name = "name")
+    @Column(name = "name    ")
     private String name;
 
     @Column(name = "age")

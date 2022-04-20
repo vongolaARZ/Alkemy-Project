@@ -10,6 +10,9 @@ public interface MovieSerieCrudRepository extends JpaRepository<MovieSerie,Long>
 
     MovieSerie findByTitle(String title);
     List<MovieSerie> findByCategory(Category category);
+    List<MovieSerie> findByTitleOrderByTitleAsc();
+    List<MovieSerie> findByDateorderByDateDesc();
+    MovieSerie save(MovieSerie movieSerie);
 
 
 
