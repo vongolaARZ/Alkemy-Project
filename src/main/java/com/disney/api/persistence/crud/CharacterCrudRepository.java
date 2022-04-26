@@ -11,8 +11,8 @@ public interface CharacterCrudRepository extends JpaRepository<Character, Long> 
 
     Character findByName(String name);
     List<Character> findByAge(Integer age);
-    List<Character> findByMovieSerie(MovieSerie movieSerie);
     Character save(Character character);
+
 
 
 
