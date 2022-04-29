@@ -64,7 +64,7 @@ public class CharacterController {
 
 
 
-    @GetMapping("/{movieSerie}")
+    @GetMapping("/{idMovieSerie}")
     ResponseEntity<List<CharacterDto>> findByMovieSerie(@PathVariable("idMovieSerie")Long idMovieSerie){
 
         return new ResponseEntity<>(characterService.findByIdMovieSerie(idMovieSerie),HttpStatus.OK);
